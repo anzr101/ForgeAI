@@ -28,6 +28,12 @@ Model → Dataset → LoRA / QLoRA → Train → Evaluate → Compare → Quanti
 **Models:** Llama 3.2 (1B / 3B) · Phi-3 Mini · Mistral 7B · Gemma 2 2B
 **Datasets:** Alpaca · Dolly 15K · OpenAssistant · GSM8K · CodeAlpaca · UltraChat 200K
 
+## 📚 Documentation
+
+Deep-dive docs live in [`docs/`](docs/) — architecture, an end-to-end data-flow trace, and
+**line-by-line annotated walkthroughs** of every source file. For feeding into NotebookLM or an
+LLM, use the single self-contained [`docs/NOTEBOOKLM_SOURCE.md`](docs/NOTEBOOKLM_SOURCE.md).
+
 ## 🛠️ Tech
 
 React 18 · TypeScript · Vite · Tailwind CSS · Zustand · Framer Motion. 100% client-side, custom SVG/canvas charts — no backend required.
