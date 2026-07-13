@@ -1,5 +1,7 @@
 # 🔥 Forge — Open-weight LLM Fine-Tuning Laboratory
 
+### ▶ Live demo: **[anzr101.github.io/ForgeAI](https://anzr101.github.io/ForgeAI/)**
+
 > GitHub + VSCode + Weights & Biases + Hugging Face, reimagined as one **cyberpunk workbench** built purely for LoRA / QLoRA experimentation.
 
 Forge is an interactive laboratory for designing, running, analyzing, and shipping open-weight LLM fine-tunes. Configure a run, watch it **train live** (animated GPU utilization, streaming loss & eval curves, real-time trainer logs), compare checkpoints, quantize, deploy — then **export the exact runnable code** to reproduce it on real hardware.
