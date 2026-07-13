@@ -157,10 +157,13 @@ export const useForge = create<ForgeState>((set, get) => {
     }
     set((st) => {
       const runs = [...st.runs.filter((r) => r.id !== summary.id), summary]
+      // Keep a meaningful A that isn't the just-finished run; else the prior run, else none.
+      const priorValid = st.compareA && st.compareA !== summary.id && runs.some((r) => r.id === st.compareA)
+      const compareA = priorValid ? st.compareA! : runs.length > 1 ? runs[runs.length - 2].id : null
       return {
         status: 'completed',
         runs,
-        compareA: st.compareA ?? runs[0]?.id ?? null,
+        compareA,
         compareB: summary.id,
       }
     })

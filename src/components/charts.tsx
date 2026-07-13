@@ -136,6 +136,7 @@ export function RadialGauge({
           strokeWidth={7}
           strokeLinecap="round"
           strokeDasharray={c}
+          initial={{ strokeDashoffset: c }}
           animate={{ strokeDashoffset: c * (1 - v) }}
           transition={{ type: 'spring', stiffness: 90, damping: 20 }}
           style={{ filter: `drop-shadow(0 0 5px ${color})` }}

@@ -69,7 +69,8 @@ export function CompareStep() {
 
   const A = runs.find((r) => r.id === compareA)
   const B = runs.find((r) => r.id === compareB)
-  const selected = [A, B].filter(Boolean) as RunSummary[]
+  // Dedupe so a run never renders twice (e.g. when only one run exists).
+  const selected = [A, B].filter((r, i, arr): r is RunSummary => !!r && arr.findIndex((x) => x?.id === r.id) === i)
 
   const diffRows: { k: string; a?: string; b?: string }[] = A && B ? [
     { k: 'model', a: getModel(A.modelId).name, b: getModel(B.modelId).name },
