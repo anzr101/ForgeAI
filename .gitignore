@@ -1,7 +1,7 @@
 node_modules
 dist
 dist-ssr
-.claude/settings.local.json
+.claude/
 *.local
 .env
 .env.*
